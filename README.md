@@ -11,5 +11,5 @@ La API tiene toda su informacion en ingles, por lo tanto, las busquedas deben re
 
 La app fue totalmente desarrollada con REACTJS, pero se utilizo para estilar Bootstrap y para los modales se implemento MaterialUI.
 
-## Demo aqui
+
 
