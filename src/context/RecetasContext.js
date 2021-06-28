@@ -11,11 +11,12 @@ const RecetasProvider = (props) => {
         nombre: '',
         categoria: ''
     });
+    
     const [ consultar, guardarConsultar] = useState(false);
-
-    const { nombre, categoria} = busqueda;
-
+    
     useEffect(() => {
+        const { nombre, categoria} = busqueda;
+
         if(consultar) {
             const obtenerRecetas = async () => {
                 const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${nombre}&c=${categoria}`;
@@ -28,7 +29,7 @@ const RecetasProvider = (props) => {
             obtenerRecetas();
         }
 
-    }, [busqueda]);
+    }, [busqueda, consultar]);
 
     return ( 
         <RecetasContext.Provider
